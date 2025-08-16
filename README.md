@@ -140,6 +140,19 @@ this.symbols = ['🦄', '🐲', '🦋', '🌸', '⭐', '🌙', '☀️', '🌈']
 
 ## 🚀 배포
 
+### 로컬 개발
+```bash
+# 의존성 설치
+npm install
+
+# 개발 서버 실행
+npm run dev
+
+# 빌드 후 실행
+npm run build
+npm start
+```
+
 ### GitHub Pages
 1. GitHub 저장소에 코드 푸시
 2. Settings > Pages에서 배포 설정
@@ -147,8 +160,15 @@ this.symbols = ['🦄', '🐲', '🦋', '🌸', '⭐', '🌙', '☀️', '🌈']
 
 ### Netlify
 1. Netlify에 GitHub 저장소 연결
-2. 자동 배포 설정
-3. 커스텀 도메인 설정 (선택사항)
+2. 빌드 설정: `npm run build`, 배포 폴더: `/`
+3. 환경변수 설정: `SUPABASE_URL`, `SUPABASE_ANON_KEY`
+4. 커스텀 도메인 설정 (선택사항)
+
+### Vercel
+1. Vercel에 GitHub 저장소 연결
+2. 환경변수 설정: `SUPABASE_URL`, `SUPABASE_ANON_KEY`
+3. 빌드 명령: `npm run build`
+4. 자동으로 배포됩니다
 
 ## 🐛 문제 해결
 
