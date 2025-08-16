@@ -39,10 +39,17 @@ CREATE TABLE game_scores (
 );
 ```
 
-3. `supabase.js` 파일에서 API 키 업데이트:
-```javascript
-const SUPABASE_ANON_KEY = 'your-actual-anon-key'; // Supabase 프로젝트 설정에서 복사
-```
+3. 환경변수 설정:
+   - `env.example` 파일을 `.env`로 복사
+   - `.env` 파일에 실제 API 키 입력:
+   ```
+   SUPABASE_URL=https://your-project-url.supabase.co
+   SUPABASE_ANON_KEY=your-actual-anon-key
+   ```
+
+**보안 주의사항:**
+- `.env` 파일은 절대 Git에 커밋하지 마세요
+- 배포 시에는 배포 플랫폼의 환경변수에 설정하세요
 
 ### 3. 로컬 서버 실행
 

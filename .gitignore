@@ -10,6 +10,10 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.env.*
+
+# Config files with sensitive data
+config.local.js
 
 # IDE files
 .vscode/

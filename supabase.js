@@ -1,8 +1,7 @@
 // Supabase 설정
-// TODO: 실제 API 키로 교체해주세요!
-// Supabase 프로젝트 설정 > API > Project API keys > anon public 키를 복사해서 아래에 붙여넣기
-const SUPABASE_URL = 'https://zfqmaxifaeuhsrfotphc.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpmcW1heGlmYWV1aHNyZm90cGhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUyOTgyNDksImV4cCI6MjA3MDg3NDI0OX0.BOR-ENko6h9uvRgyC4oPoJ3gkCTjmo5gZgVNQCpjQIU'; // 여기에 실제 API 키를 입력하세요
+// config.js에서 설정을 가져옴
+const SUPABASE_URL = window.config?.supabase?.url || 'https://zfqmaxifaeuhsrfotphc.supabase.co';
+const SUPABASE_ANON_KEY = window.config?.supabase?.anonKey || 'YOUR_ANON_KEY_HERE';
 
 // Supabase 클라이언트 초기화
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
