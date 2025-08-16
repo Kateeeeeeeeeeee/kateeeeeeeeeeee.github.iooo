@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 뒤집기 게임</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎴 카드 뒤집기 게임</h1>
+            <div class="game-info">
+                <div class="score">점수: <span id="score">0</span></div>
+                <div class="timer">시간: <span id="timer">00:00</span></div>
+                <div class="moves">이동: <span id="moves">0</span></div>
+            </div>
+        </header>
+
+        <div class="game-controls">
+            <button id="startBtn" class="btn">게임 시작</button>
+            <button id="resetBtn" class="btn">다시 시작</button>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 0%"></div>
+        </div>
+        
+        <div class="game-board" id="gameBoard">
+            <!-- 카드들이 여기에 동적으로 생성됩니다 -->
+        </div>
+
+        <div class="high-scores">
+            <h2>🏆 최고 점수</h2>
+            <div id="highScoresList">
+                <!-- 최고 점수가 여기에 표시됩니다 -->
+            </div>
+        </div>
+
+        <div id="gameOverModal" class="modal">
+            <div class="modal-content">
+                <h2>🎉 게임 완료!</h2>
+                <p>점수: <span id="finalScore">0</span></p>
+                <p>시간: <span id="finalTime">00:00</span></p>
+                <p>이동: <span id="finalMoves">0</span></p>
+                <input type="text" id="playerName" placeholder="이름을 입력하세요" maxlength="20">
+                <button id="saveScoreBtn" class="btn">점수 저장</button>
+                <button id="playAgainBtn" class="btn">다시 플레이</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
